@@ -5,7 +5,7 @@ import { ProductsRelacionations } from '../productsRelacionations/ProductsRelaci
 const RowOne = styled.div`
     padding: 1rem;
     gap: 1.5rem;
-    margin: 2rem;
+    margin: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-width: 1140px;
@@ -34,7 +34,7 @@ const ContainerScreen = styled.div`
 const Buttons = styled.div`
     display: flex;
     gap: .5em;
-    margin: 10px 0 0 0;
+    margin: 0;
 
     & button:first-child {
         background-color: transparent;
@@ -98,7 +98,7 @@ const AvaliationUser = styled.div`
     align-items: center;
     display: flex;
     gap: .5em;
-
+    border:2px solid red;
     & i {
         color: orange;
         display: block;
@@ -135,8 +135,15 @@ const NumberAvaliation = styled.div`
     line-height: 100%;
 `;
 
+const ContainerPrice = styled.div`
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+    border:1px solid red;
+`;
+
 const Price = styled.span`
-    font-size: 2.2rem;
+    font-size: 28px;
     font-weight: bold;
     line-height: 100%;
     color: rgb(16, 16, 96);
@@ -144,15 +151,16 @@ const Price = styled.span`
 
 const PriceOld = styled.span`
     color: gray;
-    font-size: 1.4rem;
+    font-size: 20px;
     font-weight: bold;
     line-height: 100%;
     text-decoration: line-through;
-    margin-left: 1rem;
+    margin-left: 0;
 `;
 
 const Description = styled.div`
-    margin-top: 1rem;
+    margin-top: 0;
+
     & h4 {
         font-size: 1.4rem;
         font-weight: bold;
@@ -160,10 +168,17 @@ const Description = styled.div`
         color: rgb(16, 16, 96);
         margin-bottom: 0.5rem;
     }
+
+    & p{
+        font-size: .9;
+        line-height: 130%;
+        color: rgb(16, 16, 96);
+        font-weight: 400;
+    }
 `;
 
 const Size = styled.div`
-    margin-top: 1rem;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
 
@@ -183,7 +198,7 @@ const Size = styled.div`
     & button {
         border: 1px solid #ccc;
         border-radius: 6px;
-        padding: 1rem;
+        padding: 0;
         background-color: white;
         cursor: pointer;
         font-size: 1.1rem;
@@ -201,7 +216,7 @@ const Size = styled.div`
 `;
 
 const Color = styled.div`
-    margin-top: 1rem;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
 
@@ -221,7 +236,7 @@ const Color = styled.div`
     & button {
         border: 1px solid #ccc;
         border-radius: 6px;
-        padding: 1rem;
+        padding: 0;
         background-color: white;
         cursor: pointer;
         font-size: 1.1rem;
@@ -241,7 +256,7 @@ const Color = styled.div`
 const Comprar = styled.button`
     border: 1px solid orange;
     border-radius: 6px;
-    padding: 1rem;
+    padding: 0;
     background-color: white;
     cursor: pointer;
     font-size: 1.1rem;
@@ -296,7 +311,7 @@ export function TelaProduct() {
                 </ContainerScreen>
 
                 <ContainerDatas>
-                    <h1>Nike - Tênis Air Max - Adventure - Modelo X876 - green </h1>
+                    <h1>Nike - Tênis Air Max - Adventure - Modelo X876 </h1>
                     <p>
                         Ref.: Tênis Nike - x876
                     </p>
@@ -317,17 +332,21 @@ export function TelaProduct() {
                         </NumberAvaliation>
                     </AvaliationUser>
 
+                    <ContainerPrice>
                     <Price>
                         R$ 150,00
                     </Price>
+
                     <PriceOld>
                         R$ 200,00
                     </PriceOld>
+                    </ContainerPrice>
 
                     <Description>
                         <h4>Descrição do produto</h4>
                         <p>
-                            Com o lendário amortecimento Air Max, cada passo se transforma em uma experiência de leveza e responsividade, absorvendo o impacto e impulsionando você para frente. O design moderno e a vibrante tonalidade.
+                            Com o lendário amortecimento Air Max, cada passo se transforma em uma experiência 
+                            de leveza e responsividade, absorvendo o impacto e impulsionando você para frente.
                         </p>
                     </Description>
 
